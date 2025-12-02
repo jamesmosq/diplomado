@@ -1,27 +1,73 @@
-*.log
-.DS_Store
+# ----------------------------------------
+# Archivos de entorno
+# ----------------------------------------
 .env
-.env.backup
-.env.production
-.phpactor.json
+.env.*
+!.env.example
+
+# ----------------------------------------
+# Logs y cachés
+# ----------------------------------------
+*.log
+/.qodo
+phpunit.result.cache
 .phpunit.result.cache
-/.fleet
-/.idea
-/.nova
 /.phpunit.cache
-/.vscode
-/.zed
-/auth.json
+npm-debug.log
+yarn-error.log
+
+# ----------------------------------------
+# Dependencias
+# ----------------------------------------
+/vendor
 /node_modules
+
+# ----------------------------------------
+# Build Frontend (Vite)
+# ----------------------------------------
 /public/build
 /public/hot
+
+# ----------------------------------------
+# Storage (excepto lo necesario)
+# ----------------------------------------
+/storage/app/*
+!/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/logs/*
+/bootstrap/cache/*
 /public/storage
+
+# Claves
 /storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
+
+# ----------------------------------------
+# Uploads y archivos generados
+# ----------------------------------------
+/public/uploads/*
+/public/images/*
+
+# ----------------------------------------
+# MoonShine
+# ----------------------------------------
+# (MoonShine no tiene carpeta propia que deba ignorarse)
+
+# ----------------------------------------
+# IDE / Sistema operativo
+# ----------------------------------------
+.DS_Store
 Thumbs.db
-.env.local
-/storage
-/bootstrap/cache
+/.vscode
+/.idea
+/.fleet
+/.zed
+
+auth.json
+.phpactor.json
+
+# ----------------------------------------
+# Homestead (si aplica)
+# ----------------------------------------
+Homestead.yaml
+Homestead.json
